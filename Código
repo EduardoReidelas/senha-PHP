@@ -1,0 +1,18 @@
+<?php
+echo "Crie sua senha: ";
+$senhaCriada = trim(fgets(STDIN));
+
+$senhaCorreta = false;
+
+while (!$senhaCorreta) {
+    echo "Digite sua senha para login: ";
+    $senhaTentativa = trim(fgets(STDIN));
+
+    if ($senhaTentativa === $senhaCriada) {
+        echo "Acesso liberado!\n";
+        $senhaCorreta = true;
+    } else {
+        echo "Senha incorreta! Tente novamente.\n";
+    }
+}
+?>
